@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 require_once "controller/userController.php";
 require_once "controller/gamesController.php";
@@ -11,6 +12,9 @@ if (isset($_GET["user"])){
 
 
 
+=======
+<?php
+>>>>>>> b48031c984d855640bcd12c279db226f3a61a9fc
 
 include_once '/controller/game.controller.php';
 
@@ -75,6 +79,10 @@ switch($params[0]){
     default:
         echo " ERROR 404 - Pagina no encontrada"; // este error tiene que salir de la vista
         break;
+<<<<<<< HEAD
 }
 
 ?>
+=======
+}
+>>>>>>> b48031c984d855640bcd12c279db226f3a61a9fc
