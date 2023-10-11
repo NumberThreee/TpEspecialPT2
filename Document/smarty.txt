@@ -5,13 +5,13 @@ Debajo habria un nav. Dentro del nav tendriamos 3 divs (o mas, depende las opcio
 Por ejemplo: 
 
 |-filtrar-| ----> .Genero
-		  .Companía
-		  .Popularidad
+		          .Companía
+		          .Popularidad
 
 En el caso de las plantillas smarty tendriamos el header de esta forma y lo replicariamos cada vez que se cargue una peticion. Igualmente ese header deberia poder modificarse dependiendo si se accedió como administrador. Por ejemplo, el boton de loggeo ya no deberia estar, siendo reemplazado por un boton que despliegue una lista, ya sea para cerrar sesion u otra cuestion.
 
 |-Admin-| ----> .Insertar datos
-		.Cerrar sesión
+		        .Cerrar sesión
 
 Podriamos también crear el footer de la misma forma y mantenerlo estático.
 
@@ -20,17 +20,18 @@ Para el tema de la carga de items, ya sea por companía o por juegos. Podriamos 
 Podriamos hacer <div class="{clase}"> y manejar justamente esa clase para poder filtrar. si decidimos filtrar por el genero terror usariamos una clase "tarjetas" por ejemplo. Y para companía usariamos "infoComanía".
 
 En una tendriamos un display flex para que se muestren todas las tarjetas de manera ordenada y acorde al filtro que hayamos usado
-				<header></header>
+				     
+					  <header></header>
 
 			->|-card1-|  |-card2-|   |-card3-|
 			
 		  	|-card4-|  |-card5-|   |-card6-|->
 	
-				<footer></footer>
+				      <footer></footer>
 
 Y en la otra podriamos optar por manejar un div por companía y dentro de ese div tener una imagen y un texto utilizando flexbox de la siguiente forma:
 
-				<header></header>
+				       <header></header>
 
 		  |---imagen companía1---|---texto companía1---| 
 
@@ -40,7 +41,7 @@ Y en la otra podriamos optar por manejar un div por companía y dentro de ese di
 
 		  |---imagen companía4---|---texto companía4---| 
 
-				<footer></footer>
+				        <footer></footer>
 
 Podiramos crear una plantilla para mostrar el juego que se eligió en una pagina nueva y con mucha mas informacion como donde comprarlo, la valoracion, un texto completo a cerca del juego en si, etc. Y tambien podriamos hacer los mismo con las empresas pero con otro tipo de distribucion en la interface. 
 
