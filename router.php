@@ -1,7 +1,8 @@
 <?php 
 
-
-include_once '/controller/game.controller.php';
+require_once 'controller/gamesController.php';
+require_once 'controller/companyController.php';
+require_once 'controller/userController.php';
 
 // defino la base url para la construccion de links con urls semánticas
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -18,11 +19,11 @@ $params = explode('/', $action);
 
 switch($params[0]){
     case 'home':
-        //muestra home
-            
+        $conpanyController = new CompanyController();
+        echo 'HOLA!!';    
         break;
     case 'company':
-        //Rodrigo
+        
               
         break;
     case 'games':
@@ -62,7 +63,7 @@ switch($params[0]){
         break;
 
 }
-
+    
 ?>
 
 

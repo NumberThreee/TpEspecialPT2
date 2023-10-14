@@ -1,7 +1,7 @@
 <?php 
 
-require_once "../model/gamesModel.php";
-require_once "../view/gamesView.php";
+require_once '../model/gamesModel.php';
+require_once '../view/gamesView.php';
 
 class GamesController{
     private $company;
