@@ -11,7 +11,7 @@
       
         </section>
         <div class="bton_ver_mas_container">
-            <button class="btnVer_mas"> <a href=""> Ver más </a></button>
+            <button class="btnVer_mas"> <a href="router.php?action=verMas"> Ver más </a></button>
         </div>
         <hr>
 </section>

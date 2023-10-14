@@ -1,7 +1,7 @@
 <?php 
 
-require_once 'controller/gamesController.php';
 require_once 'controller/companyController.php';
+require_once 'controller/gamesController.php';
 require_once 'controller/userController.php';
 
 // defino la base url para la construccion de links con urls semánticas
@@ -15,15 +15,16 @@ if(!empty($_GET['action'])){
     $action = 'home';
 }
 
+
 $params = explode('/', $action);
 
 switch($params[0]){
     case 'home':
-        $conpanyController = new CompanyController();
-        echo 'HOLA!!';    
+         
         break;
     case 'company':
-        
+        $companyController = new CompanyController();   
+        $companyController->showCompanies($companyController->searchDB());
               
         break;
     case 'games':

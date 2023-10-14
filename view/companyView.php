@@ -1,5 +1,5 @@
 <?php 
-require_once "../libs/smarty/Smarty.class.php";
+require_once "libs/smarty/Smarty.class.php";
 class CompanyView{
 
     public function LoadCompanies($companies){

@@ -1,7 +1,6 @@
 <?php
 
 class CompanyModel{
-
     private $db;
 
     public function __construct(){
