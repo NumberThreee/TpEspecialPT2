@@ -1,0 +1,163 @@
+body{
+    margin: 0 auto;
+    font-family: 'Fjalla One', sans-serif;
+    color: black;
+}
+header{
+    display: flex;
+    background-color: #0a051d;
+    height: 125px;
+    border-bottom: 1px solid #0aabba;
+}
+.header_div_uno{
+    width: 70%;
+}
+.header_div_dos{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lista_plataformas{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 0;
+}
+h3{
+    font-size: 25px;
+}
+
+
+#logo{
+    width: 80px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+h1{
+    margin-top: 0;
+    margin-left: 3%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px red
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: #140a3a;
+    position: relative;
+    height: 25px;
+    border-bottom: 1px solid black;
+    
+}
+.lista{
+    display: none;
+}
+.showLista{
+    display: block;
+    position: absolute;
+    padding: 0 auto;
+    width: 33%;
+    margin: 0 auto;
+}
+li {
+    list-style: none;
+    
+}
+i{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color:black;
+    width: 100%;
+    
+}
+.divBox{
+    width: 33%;
+    margin: 0;
+    padding: 0;
+
+}
+.btn_nav{
+    width: 100%;
+    height: 25px;
+    border: none;
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: transparent;
+    font-size: medium;
+    color: white;
+}
+.a_nav{
+    color: white;
+    width: 100%;
+}
+.btn_nav:hover,
+.btn_nav:hover .a_nav {
+    background-color: #5532dc;
+    color: #140a3a;
+   
+    
+}
+.section_container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+
+}
+.company{
+    width: 100%;
+    display: flex;
+}
+.imagenCompany{
+    width: 50%;
+    
+}
+.imagenCompany img{
+    width: 100%;
+}
+.textCompany{
+    width: 50%;
+    padding: 10px;   
+}
+.bton_ver_mas_container{
+    display: flex;
+    justify-content: center;
+}
+.btnVer_mas{
+    
+    width: 60px;
+    height: 40px;
+    background-color: #5532dc;
+    border: none;
+    color: white;
+}
+
+hr{
+    color: black;
+    margin: 1px solid black;
+}
+.container_cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_container{
+    width: 200px;
+    background-color: #8155eb;
+    border: 2px solid #140a3a;
+
+}
+.img_card img{
+    width: 100%;
+    
+}

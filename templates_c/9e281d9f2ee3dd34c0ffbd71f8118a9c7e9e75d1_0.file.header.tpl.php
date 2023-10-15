@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2023-10-15 05:37:49
+  from 'C:\xampp\htdocs\TpEspecialPT2\templates\header.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_652b5e8de0cbe1_37184647',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '9e281d9f2ee3dd34c0ffbd71f8118a9c7e9e75d1' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\TpEspecialPT2\\templates\\header.tpl',
+      1 => 1697341067,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_652b5e8de0cbe1_37184647 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +32,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Orbitron&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/f810954eb8.js" crossorigin="anonymous"></script>
+    <?php echo '<script'; ?>
+ src="https://kit.fontawesome.com/f810954eb8.js" crossorigin="anonymous"><?php echo '</script'; ?>
+>
     <link rel="stylesheet" href="css/stryle.css">
     <title>Document</title>
 </head>
@@ -50,3 +75,5 @@
         </div>
     </nav>
  
+<?php }
+}

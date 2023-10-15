@@ -1,6 +1,7 @@
 <?php
 
-include_once '/controller/game.controller.php';
+include_once 'controller/gamesController.php';
+//include_once 'templates/index.html';
 
 // defino la base url para la construccion de links con urls semánticas
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -10,18 +11,23 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
 if(!empty($_GET['action'])){    
     $action = $_GET['action'];
 } else {
-    $action = 'inicio';
+    $action = 'home';
 }
 
 $params = explode('/', $action);
 
 switch($params[0]){
-    case 'inicio':
-        //muestra home
+    case 'home':
+        // ElHome seria otro!!
+        $controller = new gamesController();
+        $controller->showAll();
             
         break;
-    case 'quienes somos':
-        //descripcion de la pagina  + desarrolladores (Rod - juli - Mauricio)
+    case 'games':
+        // muestra un listado con todos los juegos
+
+        $controller = new gamesController();
+        $controller->showAll();
               
         break;
     case 'busquedas':
@@ -30,14 +36,22 @@ switch($params[0]){
         break;
     case 'agregarJuego':
         // Agrega un juego a la db - solo administrador logeado
+        $controller = new gamesController();
+        $controller->addGame();
         
         break;
     case 'borrarJuego':
         // Borra un juego de la db - solo administrador logeado
+        $controller = new gamesController();
+        $controller->delGame($params[1]);
+        
         break;
         
     case 'modificaJuego':
         // Modifica un juego en la db - solo administrador logeado
+        $controller = new gamesController();
+        $controller->updateGame($params[1]);
+        echo $params[1];
         break;
 
     case 'agregadesarrolladora':
