@@ -59,6 +59,13 @@ class gamesModel{
     
     }
 
+    function getGame($id){
+        $query = $this->db->prepare('SELECT * FROM juegos WHERE id = ?');
+        $query->execute([$id]);
+        $game = $query -> fetch(PDO::FETCH_OBJ);
+        return $game;
+    }
+
     
     
 

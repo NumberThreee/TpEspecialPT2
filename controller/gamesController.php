@@ -37,7 +37,7 @@ class gamesController{
         $nombre = $_REQUEST['nombre'];
         $genero = $_REQUEST['genero'];
         $precio = $_REQUEST['precio'];
-        $año    = $_REQUEST['año'];
+        $año    = $_REQUEST['año'];                             ////ESTO SE PODRIA MEJORARA PARA NO REPETIR TANTO CODIGO
         $material= $_REQUEST['material'];
         $descripcion = $_REQUEST['descripcion'];
         $imagen = $_REQUEST['imagen'];
@@ -48,9 +48,13 @@ class gamesController{
     }
 
     function addGame(){
+
+        echo " aca vendria el formulario de carga";
+
+        $this->view->showForm();
         // Estos valores vienen de un formulario
         $nombre = $_REQUEST['nombre'];
-        $genero = $_REQUEST['genero'];
+        $genero = $_REQUEST['genero'];                          ////ESTO SE PODRIA MEJORARA PARA NO REPETIR TANTO CODIGO
         $precio = $_REQUEST['precio'];
         $año    = $_REQUEST['año'];
         $material= $_REQUEST['material'];
@@ -70,5 +74,13 @@ class gamesController{
         //redirijo al listado de todos los juegos
         header("Location:". BASE_URL . "/games");
     
+    }
+
+    function seeMoreGame($id){
+        
+        $game = $this->model->getGame($id);
+        $this->view->showDetailsGame($game);
+        
+
     }
 }

@@ -30,8 +30,10 @@ switch($params[0]){
         $controller->showAll();
               
         break;
-    case 'busquedas':
+    case 'filtrar':
         // diferentes tipos de busqueda (los que pide el enunciado)
+        echo "aca iria a listar los juegos de acuerdo a una compañia";
+
             
         break;
     case 'agregarJuego':
@@ -51,7 +53,12 @@ switch($params[0]){
         // Modifica un juego en la db - solo administrador logeado
         $controller = new gamesController();
         $controller->updateGame($params[1]);
-        echo $params[1];
+        break;
+
+    case 'verMas':
+        // Muestra info de cada juego
+        $controller = new gamesController();
+        $controller->seeMoreGame($params[1]);
         break;
 
     case 'agregadesarrolladora':

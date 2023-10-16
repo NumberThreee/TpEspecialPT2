@@ -4,14 +4,26 @@ include_once ('libs/smarty/Smarty.class.php');
 
 class gamesView{
 
-    function showGames($games){
+    private $smarty;
 
-        $smarty = new Smarty();
+    function __construct(){
+        $this->smarty = new Smarty();
+        
+    }
 
-        $smarty->assign('games', $games);
+    function showGames($games){       
+        $this->smarty->assign('games', $games);
+        $this->smarty->display('templates/games.tpl');
 
-        $smarty->display('templates/games.tpl');
+    }
 
+    function showDetailsGame($game){
+        $this->smarty->assign('game', $game);
+        $this->smarty->display('templates/gamedetails.tpl');
+    }
+
+    function showform(){
+        $this->smarty->display('templates/formalta.tpl');
     }
 
     function showError($msg){   //  Falta smarty !!!!
